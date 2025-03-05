@@ -5,7 +5,7 @@ import { plumeTheme } from "vuepress-theme-plume";
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
-  title: "My Vuepress Site",
+  title: "努力学会月牙天冲",
   description: "",
 
   head: [
