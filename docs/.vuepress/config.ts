@@ -15,7 +15,8 @@ export default defineUserConfig({
       {
         rel: "icon",
         type: "image/png",
-        href: "https://theme-plume.vuejs.press/favicon-32x32.png",
+        //href: "https://theme-plume.vuejs.press/favicon-32x32.png",
+        href: "https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%86%8D%E8%A7%81huili&step_word=&hs=0&pn=35&spn=0&di=7466852183703552001&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3635654561%2C2667832311&os=240466911%2C1257861151&simid=11555038%2C634638678&adpicid=0&lpn=0&ln=955&fr=&fmq=1741183262688_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=https%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2Ffe9e3c91ebd4f1b1d221be20fd6c0af0e0557b50.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bktstktst_z%26e3Bv54AzdH3Fet1j5AzdH3FBV8m99y8v0w2&gsm=1e&rpstart=0&rpnum=0&islist=&querylist=&nojc=undefined&dyTabStr=MCwxMiwzLDEsMiwxMyw3LDYsNSw5&lid=9331763934173401327",
       },
     ],
   ],
