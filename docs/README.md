@@ -6,7 +6,7 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: Camellia-0622
+      name: Camellia-0510
       tagline: To Be Or Not To Be
       text: We reach for the stars, acted like man
       actions:
