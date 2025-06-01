@@ -6,7 +6,7 @@ export default defineNoteConfig({
   sidebar: [
     "README.md",
     {
-      text: "二、C++核心编程",
+      text: "C++核心编程",
       prefix: "core",
       items: [
         "1-内存分区模型.md",
