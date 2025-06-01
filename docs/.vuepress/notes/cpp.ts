@@ -1,7 +1,7 @@
 import { defineNoteConfig } from "vuepress-theme-plume";
 
 export default defineNoteConfig({
-  dir: "程序猿",
-  link: "/程序猿/",
+  dir: "cpp",
+  link: "/cpp/",
   sidebar: ["README.md", "test1"],
 });
