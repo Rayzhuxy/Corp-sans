@@ -36,14 +36,15 @@ export default defineThemeConfig({
    */
   profile: {
     avatar: "https://theme-plume.vuejs.press/plume.png",
-    name: "My Vuepress Site",
-    description: "",
-    // circle: true,
-    // location: '',
+    name: "Ray_Zhu",
+    description: "Carpe diem",
+    circle: true,
+    location: "Wuhan, China",
     // organization: '',
   },
-
+  // 注释 navbar 保存后 取消注释 再保存 可以更新笔记下拉栏状态
   navbar,
+  // 注释 notes 保存后 取消注释 再保存 可以更新笔记内侧边栏状态
   notes,
 
   /**
@@ -58,9 +59,9 @@ export default defineThemeConfig({
   // },
 
   /* 过渡动画 @see https://theme-plume.vuejs.press/config/basic/#transition */
-  // transition: {
-  //   page: true,        // 启用 页面间跳转过渡动画
-  //   postList: true,    // 启用 博客文章列表过渡动画
-  //   appearance: 'fade',  // 启用 深色模式切换过渡动画, 或配置过渡动画类型
-  // },
+  transition: {
+    // page: true,        // 启用 页面间跳转过渡动画
+    // postList: true,    // 启用 博客文章列表过渡动画
+    appearance: "fade", // 启用 深色模式切换过渡动画, 或配置过渡动画类型
+  },
 });
