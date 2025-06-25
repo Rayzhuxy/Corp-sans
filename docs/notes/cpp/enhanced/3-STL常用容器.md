@@ -126,6 +126,18 @@ int main() {
 }
 ```
 
+输出
+
+```bash
+str1 = hello world
+str2 = hello world
+str3 = a
+str4 = hello c++
+str5 = hello
+str6 = hello
+str7 = xxxxx
+```
+
 总结：string 的赋值方式很多，`operator=` 这种方式是比较实用的
 
 ### 3.1.4 string 字符串拼接
@@ -170,7 +182,7 @@ void test01()
 	str3.append(" love ");
 	str3.append("game abcde", 4);
 	//str3.append(str2);
-	str3.append(str2, 4, 3); // 从下标4位置开始 ，截取3个字符，拼接到字符串末尾
+	str3.append(str2, 4, 3); // 从下标4位置开始 ，截取3个字符，拼接到字符串末尾(注意从零开始)
 	cout << "str3 = " << str3 << endl;
 }
 int main() {
@@ -236,20 +248,28 @@ void test02()
 {
 	//替换
 	string str1 = "abcdefgde";
-	str1.replace(1, 3, "1111");
+	str1.replace(1, 3, "1111");   //3指替换b，c，d三个数为1111
 
 	cout << "str1 = " << str1 << endl;
 }
 
 int main() {
 
-	//test01();
-	//test02();
+	test01();
+	test02();
 
 	system("pause");
 
 	return 0;
 }
+```
+
+输出
+
+```bash
+pos = 3
+pos = 7
+str1 = a1111efgde
 ```
 
 总结：
@@ -384,10 +404,10 @@ void test01()
 {
 	string str = "hello";
 	str.insert(1, "111");
-	cout << str << endl;
+	cout << str << endl;   //h111ello
 
-	str.erase(1, 3);  //从1号位置开始3个字符
-	cout << str << endl;
+	str.erase(1, 4);  //从1号位置开始4个字符
+	cout << str << endl;   //hllo
 }
 
 int main() {
@@ -517,6 +537,14 @@ int main() {
 }
 ```
 
+> [!tip]
+>
+> cout << *it << " "中为什么要返回 *it ，it 是什么类型
+>
+> `it` 是一个迭代器（iterator），类型为 `vector<int>::iterator`,它是 `vector<int>` 的内部迭代器，用于遍历容器中的元素,类似==指针的对象==
+>
+> `*it` 解引用迭代器，等价于访问当前元素的值
+
 **总结：** vector 的多种构造方式没有可比性，灵活使用即可
 
 ### 3.2.3 vector 赋值操作
@@ -529,7 +557,7 @@ int main() {
 
 - `vector& operator=(const vector &vec);`//重载等号操作符
 
-- `assign(beg, end);` //将[beg, end)区间中的数据拷贝赋值给本身。
+- `assign(beg, end);` //将[beg, end)区间中的数据拷贝赋值给本身。==(深拷贝)==
 - `assign(n, elem);` //将 n 个 elem 拷贝赋值给本身。
 
 **示例：**
@@ -655,6 +683,16 @@ int main() {
 
 ```
 
+输出：
+
+```bash
+v1不为空
+v1的容量 = 16
+v1的大小 = 10
+0 1 2 3 4 5 6 7 8 9 10 10 10 10 10
+0 1 2 3 4
+```
+
 总结：
 
 - 判断是否为空 --- empty
@@ -718,8 +756,8 @@ void test01()
 	printVector(v1);
 
 	//清空
-	v1.erase(v1.begin(), v1.end());
-	v1.clear();
+	v1.erase(v1.begin(), v1.end()); //需要迭代
+	v1.clear();  					//编译器优化，性能更优
 	printVector(v1);
 }
 
@@ -731,6 +769,17 @@ int main() {
 
 	return 0;
 }
+```
+
+输出：
+
+```bash
+10 20 30 40 50
+10 20 30 40
+100 10 20 30 40
+1000 1000 100 10 20 30 40
+1000 100 10 20 30 40
+
 ```
 
 总结：
@@ -749,8 +798,8 @@ int main() {
 
 **函数原型：**
 
-- `at(int idx); ` //返回索引 idx 所指的数据
-- `operator[]; ` //返回索引 idx 所指的数据
+- `at(int idx); ` //返回索引 idx 所指的数据==(会有边界检查，遇到问题时会抛出异常)==
+- `operator[]; ` //返回索引 idx 所指的数据==(性能更快，但没有边界检查)==
 - `front(); ` //返回容器中第一个数据元素
 - `back();` //返回容器中最后一个数据元素
 
