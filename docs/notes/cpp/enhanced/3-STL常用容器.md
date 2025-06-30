@@ -1063,6 +1063,10 @@ int main() {
 
 **总结：** deque 容器和 vector 容器的构造方式几乎一致，灵活使用即可
 
+> [!tip] deque<int> d2(d1.begin(),d1.rbegin());为什么会报错
+>
+> STL 构造函数要求迭代器范围必须是同一类型的迭代器，而 `begin()` (deque<int>::iterator)和 `rbegin()` (deque<int>::reverse_iterator)的类型不同，因此编译器无法推导出正确的范围。
+
 ### 3.3.3 deque 赋值操作
 
 **功能描述：**
@@ -2055,7 +2059,7 @@ int main() {
 - `clear();`//移除容器的所有数据
 - `erase(beg,end);`//删除[beg,end)区间的数据，返回下一个数据的位置。
 - `erase(pos);`//删除 pos 位置的数据，返回下一个数据的位置。
-- `remove(elem);`//删除容器中所有与 elem 值匹配的元素。
+- `remove(elem);`//删除容器中==所有==与 elem 值匹配的元素。
 
 **示例：**
 
@@ -2108,7 +2112,7 @@ void test01()
 	L.push_back(10000);
 	L.push_back(10000);
 	printList(L);
-	L.remove(10000);
+	L.remove(10000);    // 上述10000全部消除
 	printList(L);
 
     //清空
@@ -2186,7 +2190,7 @@ int main() {
 
 总结：
 
-- list 容器中不可以通过[]或者 at 方式访问数据
+- l==ist 容器中不可以通过[]或者 at 方式访问数据==
 - 返回第一个元素 --- front
 - 返回最后一个元素 --- back
 
@@ -2829,7 +2833,7 @@ public:
 class comparePerson
 {
 public:
-	bool operator()(const Person& p1, const Person &p2)
+	bool operator()(const Person& p1, const Person &p2)  // [!highlight]
 	{
 		//按照年龄进行排序  降序
 		return p1.m_Age > p2.m_Age;
@@ -2877,7 +2881,7 @@ int main() {
 
 - map 中所有元素都是 pair
 - pair 中第一个元素为 key（键值），起到索引作用，第二个元素为 value（实值）
-- 所有元素都会根据元素的键值自动排序
+- 所有元素都会根据元素的==键值自动排序==
 
 **本质：**
 
