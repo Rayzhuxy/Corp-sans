@@ -1,3 +1,8 @@
+---
+title: base
+createTime: 2025/08/27 12:39:48
+permalink: /HouJie/fwj450r0/
+---
 # 构造函数
 
 ## inline 函数

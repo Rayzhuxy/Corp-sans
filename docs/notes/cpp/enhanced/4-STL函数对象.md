@@ -1,3 +1,8 @@
+---
+title: 4-STL函数对象
+createTime: 2025/06/19 20:44:23
+permalink: /cpp/vzyzv57j/
+---
 # 4-STL 函数对象
 
 ## 4.1 函数对象

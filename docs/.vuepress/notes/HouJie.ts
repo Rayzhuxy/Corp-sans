@@ -7,7 +7,7 @@ export default defineNoteConfig({
     "README.md",
     {
       text: "C++面向对象高级开发",
-      prefix: "1",
+      prefix: "oop1",
       items: ["base.md"],
     },
   ],
