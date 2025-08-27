@@ -1,8 +1,8 @@
 import { defineNoteConfig } from "vuepress-theme-plume";
 
 export default defineNoteConfig({
-  dir: "JieHou",
-  link: "/JieHou/",
+  dir: "HouJie",
+  link: "/HouJie/",
   sidebar: [
     "README.md",
     {
@@ -10,8 +10,8 @@ export default defineNoteConfig({
       prefix: "notes",
       items: [
         "对象模型.md",
-        "基于对象 - 单一的 class.md",
-        "面向对象 - class 与 class 之间的关系.md",
+        "基于对象-单一的class.md",
+        "面向对象-class与class之间的关系.md",
         "杂谈以及模板.md",
         "CP泛型算法.md",
         "CP关联容器.md",
