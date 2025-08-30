@@ -1,11 +1,12 @@
 ---
 title: 面向对象 - class 与 class 之间的关系
 createTime: 2025/08/30 22:58:25
-permalink: /houJie/iixwj3c2/
+permalink: /HouJie/iixwj3c2/
 ---
+
 # 面向对象 - class 与 class 之间的关系
 
-### Composition 复合   has-a
+### Composition 复合 has-a
 
 **即 class 中有另一种 class。** 比如容器 `queue` 使用 `deque` 作为底层容器时，queue has a deque:
 
@@ -43,7 +44,7 @@ queue::queue(...): deque() {...};
 queue::~queue(...) { ... ~deque() };
 ```
 
-### Delegation 委托    Composition by reference
+### Delegation 委托 Composition by reference
 
 **即 class 中有另一种 class，但不是实例对象，而是指向那个 class 对象的指针。**是一种 reference 的复合。比如对于 String 类
 
@@ -55,7 +56,7 @@ queue::~queue(...) { ... ~deque() };
 
 此外需要注意的是，当有多份相同的 String 对象 a, b, c 时，指向同一个 StringRep 可以节省内存，通过引用计数来保证 StringRep 对象的生命。当某一个对象 a 想要改动数据时，则为 a 单独拷贝一份 StringRep 对象 (**copy on write**)
 
-### Inheritance 继承    is-a
+### Inheritance 继承 is-a
 
 ```cpp
 struct _List_node_base
@@ -113,12 +114,3 @@ class Ellipse: public Shape { ... };
 ##### Composite 组合设计模式
 
 ![image-20220209101914687](images/image-20220209101914687.png)
-
-
-
-
-
-
-
-
-

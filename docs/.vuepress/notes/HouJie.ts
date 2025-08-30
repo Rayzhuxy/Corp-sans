@@ -1,8 +1,8 @@
 import { defineNoteConfig } from "vuepress-theme-plume";
 
 export default defineNoteConfig({
-  dir: "houJie",
-  link: "/houJie/",
+  dir: "HouJie",
+  link: "/HouJie/",
   sidebar: [
     "README.md",
     {
