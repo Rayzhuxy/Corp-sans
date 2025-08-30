@@ -3,6 +3,7 @@ title: 3-STL常用容器
 createTime: 2025/06/19 20:44:10
 permalink: /cpp/dj3o4nb0/
 ---
+
 # 3-STL 常用容器
 
 ## 3.1 string 容器
@@ -1068,9 +1069,11 @@ int main() {
 
 **总结：** deque 容器和 vector 容器的构造方式几乎一致，灵活使用即可
 
-> [!tip] deque<int> d2(d1.begin(),d1.rbegin());为什么会报错
+<!-- > [!tip]
 >
-> STL 构造函数要求迭代器范围必须是同一类型的迭代器，而 `begin()` (deque<int>::iterator)和 `rbegin()` (deque<int>::reverse_iterator)的类型不同，因此编译器无法推导出正确的范围。
+> deque<int> d2(d1.begin(),d1.rbegin());为什么会报错
+>
+> STL 构造函数要求迭代器范围必须是同一类型的迭代器，而 `begin()` (deque<int>::iterator)和 `rbegin()` (deque<int>::reverse_iterator)的类型不同，因此编译器无法推导出正确的范围。 -->
 
 ### 3.3.3 deque 赋值操作
 
