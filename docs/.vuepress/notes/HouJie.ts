@@ -24,7 +24,7 @@ export default defineNoteConfig({
     {
       text: "C++面向对象高级开发",
       prefix: "oop1",
-      items: ["base.md"],
+      items: ["面向对象高级开发1.md"],
     },
   ],
 });
