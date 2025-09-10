@@ -16,7 +16,7 @@ export const navbar = defineNavbarConfig([
     items: [
       { text: "Demo", link: "/notes/demo/README.md" },
       { text: "cpp", link: "/notes/cpp/README.md" },
-      { text: "HouJie", link: "/notes/HouJie/README.md" },
+      // { text: "HouJie", link: "/notes/HouJie/README.md" },
     ],
   },
 ]);
